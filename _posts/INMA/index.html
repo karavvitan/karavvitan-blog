@@ -1,1 +1,750 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>mdht</title>
+  <style>
+    figcaption {
+      color: dimgray;
+      text-decoration: underline;
+    }
+
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ide-notasi-musik-alternatif"
+id="toc-ide-notasi-musik-alternatif">Ide Notasi Musik Alternatif</a>
+<ul>
+<li><a href="#notasi-teks" id="toc-notasi-teks">Notasi Teks</a>
+<ul>
+<li><a href="#i.-notasi-et-desimal5" id="toc-i.-notasi-et-desimal5">I.
+Notasi ET Desimal</a></li>
+<li><a href="#ii.-notasi-rasio" id="toc-ii.-notasi-rasio">II. Notasi
+Rasio</a></li>
+<li><a href="#iii.-notasi-derajat-dalam-tangganada"
+id="toc-iii.-notasi-derajat-dalam-tangganada">III. Notasi Derajat dalam
+Tangganada</a></li>
+<li><a href="#iv.-notasi-ritme" id="toc-iv.-notasi-ritme">IV. Notasi
+Ritme</a></li>
+</ul></li>
+<li><a href="#notasi-balok" id="toc-notasi-balok">Notasi Balok</a>
+<ul>
+<li><a href="#balok-12et" id="toc-balok-12et">I. Berbasis 12-ET</a></li>
+<li><a href="#ii.-berbasis-derajat-dalam-tangganada"
+id="toc-ii.-berbasis-derajat-dalam-tangganada">II. Berbasis Derajat
+dalam Tangganada</a></li>
+</ul></li>
+<li><a href="#glosarium" id="toc-glosarium">Glosarium</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="ide-notasi-musik-alternatif">Ide Notasi Musik Alternatif</h1>
+<p>Banyak orang di dunia mengadopsi sistem notasi konvensional Barat
+secara mentah tanpa penyesuaian ataupun inovasi. Padahal, ada banyak
+masalah pada notasi konvensional Barat dalam bentuknya yang sekarang. Di
+antaranya sebagai berikut:</p>
+<ul>
+<li>Sangat didasarkan pada mayor kunci C secara absolut<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.
+Maksud saya, hampir semua notasi Barat didasarkan pada tangganada mayor!
+Sebenarnya ini praktis, terutama untuk tradisi musik yang banyak
+menggunakan tangganada mayor, <em>tetapi kepraktisannya terlalu
+spesifik</em>, akan membingungkan ketika menggunakan
+tangganada-tangganada lain terutama yang mikrotonal.</li>
+<li>Terbatas pada 12-ET diskret. Sebenarnya sering diluaskan dengan
+penambahan/pengurangan sen, atau menggunakan notasi sen dari awal.
+Namun, lebih praktis jika menggunakan <em>notasi 12-ET desimal</em>
+(yang akan dijelaskan kemudian).</li>
+<li>Nada yang mungkin lebih kompleks malah dinotasikan dengan huruf,
+sedangkan oktaf yang jumlahnya saja terbatas malah dinotasikan dengan
+angka.</li>
+<li>Dalam notasi balok<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a> konvensional, pola berulang setiap
+dua oktaf. Ini bisa membantu atau merepotkan tergantung individu. Bagi
+beberapa orang (termasuk saya) pola berulang per oktaf jauh lebih
+intuitif.</li>
+<li>Dalam notasi balok konvensional, ada <em>lima</em> garis dengan
+ketebalan yang sama, jadi agak sulit dibaca.</li>
+<li>Dalam notasi balok konvensional, banyak jenis klef yang telah
+didefinisikan yang harus dihafalkan.</li>
+<li>Hal yang terburuk adalah banyaknya orang yang menotasikan
+enumerasi<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a> tangganada<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+dengan notasi balok! Maksudnya, kan setidaknya notasi alfabet
+Barat—walaupun tidak sempurna—lebih berguna dan <em>sangat</em> cukup
+untuk menotasikan tangganada umum. Tangganada kan cuma satu dimensi, ngapain
+dipersulit dengan notasi balok yang tidaklah lebih baik (secara teoretis
+maupun praktis)?!</li>
+</ul>
+<h2 id="notasi-teks">Notasi Teks</h2>
+<p>Notasi-notasi teks berikut (kecuali notasi ritme) saya harap
+digunakan oleh semua orang sebagai pengganti notasi teks konvensional
+karena jauh lebih logis, intuitif, fleksibel, dan praktis.</p>
+<h3 id="i.-notasi-et-desimal5">I. Notasi ET Desimal<a href="#fn5"
+class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a></h3>
+<p>Setiap nada dalam ET dinotasikan dengan angka secara berurutan dari
+0. Mikroton dinotasikan dengan titik desimal. Misalnya jika berbasis
+12-ET dengan $\text{nada 0}=C$, maka
+$C=0, D\text{\#}=3, G=7, A+20¢=9.2$.</p>
+<p>Berikut perincian bagaimana oktaf dinotasikan.</p>
+<ul>
+<li>Jika menggunakan oktaf absolut/standar (seperti $A4=440 Hz$), kita
+bisa menandai oktaf menggunakan huruf, dengan $\text{oktaf 0}=A$ dan
+seterusnya. Oktaf ditulis di kanan nada supaya tidak tertukar dengan
+notasi alfabet konvensional. Misalnya (12-ET):
+$\text{oktaf 6}=\text{oktaf G}, F3=5D$.</li>
+<li>Jika menggunakan oktaf relatif, kita bisa menandai oktaf
+<em>non</em>dasar dengan angka langkah oktaf dari oktaf dasar, dalam
+kurung siku menempel dengan nada ET. Misalnya (12-ET):
+$\text{nada 3 di satu oktaf atas oktaf dasar}=3[1]$,
+$\text{nada 5 di dua oktaf bawah oktaf dasar}=5[-2]$.</li>
+</ul>
+<blockquote>
+<p>Nada itu memang lebih cocok dinotasikan dengan angka, dan oktaf
+dinotasikan dengan huruf.</p>
+<p>Angka <em>adalah</em> alat untuk menghitung, sedangkan huruf itu
+susah jika dijadikan alat menghitung. Nada itu bisa jadi kompleks,
+banyak nada digunakan dalam satu konteks, kita ingin perhitungan nada
+lebih mudah, maka angka lebih cocok untuk menotasikannya. Oktaf di sisi
+lain, totalnya yang bisa didengar manusia terbatas (hanya sekitar 11
+oktaf), dan yang sering digunakan juga lebih terbatas, bahkan kadang
+nilai oktaf spesifik tidaklah relevan, maka huruf cocok untuk
+menotasikannya.</p>
+</blockquote>
+<p>Gunakan sistem 12-ET, dengan $\text{nada 0}=C4=tonik$ sebagai
+<em>default</em>. Sebutkan secara eksplisit jika menggunakan yang lain,
+kecuali konteks sangat jelas.</p>
+<p>Notasi ini bisa dipakai dengan dua cara, menunjukkan nilai eksak
+matematis yang kita tandai dengan <em>{ET}e</em>, atau mewakilinya
+(dengan membulatkannya) yang kita tandai dengan <em>{ET}k</em>.</p>
+<p>Sebenarnya, saya tidak setuju dengan konsep ET karena secara
+teorinya, musik itu didasarkan pada rasio, bukan logika ET. Meskipun
+begitu, ET berguna dalam beberapa konteks praktis, termasuk sebagai
+notasi konsisten musik atau satuan akustik.</p>
+<p>Awalnya mungkin terasa menakutkan melihat 12 angka dalam 12-ET.
+Namun, dalam notasi alfabet pun kita tetap harus menghafal 12 karakter
+berbeda, dan berdasarkan pengalaman saya sendiri, waktu yang diperlukan
+untuk mampu membaca nada dengan notasi alfabet dan angka 12-ET sama
+saja. Dan percayalah, setelah melakukan sedikit usaha membiasakan
+membaca nada dengan notasi angka 12-ET, misalnya membaca berbagai
+tangganada dengan notasi angka 12-ET, kemampuan membaca dengan notasi
+angka 12-ET ini akan sangat berguna dan membantu dalam memahami musik.
+Misalnya kita bisa dengan mudah menghitung interval antarnada secara
+spontan, memiliki pemahaman yang lebih objektif mengenai musik, dan
+memudahkan saat belajar dan bermain tangganada-tangganada selain mayor
+kunci C (terutama yang mikrotonal). Kita pun tidak terbatas pada 12-ET
+diskret, karena dengan angka, kita bisa menggunakan titik desimal.</p>
+<p>Kelebihan notasi ET desimal adalah kelogisannya tetapi tetap intuitif
+dan mudah dibaca. Notasi ini sangat cocok baik untuk menotasikan satuan
+nada maupun enumerasi himpunan nada. Dan lumayan cocok untuk menotasikan
+melodi dalam bentuk teks jika pembaca terbiasa. Atau bisa menggunakan <a
+href="#balok-12et">notasi balok 12-ET</a> yang akan saya jelaskan
+kemudian.</p>
+<h5 id="contoh-penggunaan">Contoh penggunaan</h5>
+<ul>
+<li>Enumerasi tangganada:<br />
+minor (ET tuning): 12e[0, 2, 3, 5, 7, 8, 10]</li>
+<li>Penotasian melodi
+<ul>
+<li>sederhana:</li>
+</ul>
+<pre><code>judul: Dasar Melodi &#39;Sakura Sakura&#39;
+not: 12k /*12-ET, kasar/kira-kira*/
+---
+0F 0F 2F | 0F 0F 2F |  0F 2F 3F 2F | 0F 2F 0F 8 | 7 3 7 8 | 7 7 3 2 | 0F 2F 3F 2F | 0F 2F 0F 8 | 7 3 7 8 | 7 7 3 2 | 0F 0F 2F | 0F 0F 2F  | 7 8 2F 0F 8 | 7</code></pre>
+<ul>
+<li>dengan ritme:</li>
+</ul>
+<pre><code>judul: Dasar Melodi &#39;Sakura Sakura&#39;
+tangganada: 12k[0, 2, 3, 7, 8] /*Saya tidak tahu namanya*/
+bpm: 62
+not: 12k, ritrad /*notasi ritme tradisional*/
+(bagian kanan koma adalah penyebut dari nilai not)
+---
+0F,4 0F,4 2F,2 | 0F,4 0F,4 2F,2 | 0F,4 2F,4 3F,4 2F,4 | 0F,4 2F,8 0F,8 8,2 | 7,4 3,4 7,4 8,4 | 7,4 7,8 3,8 2,2 | 0F,4 2F,4 3F,4 2F,4 | 0F,4 2F,8 0F,8 8,2 | 7,4 3,4 7,4 8,4 | 7,4 7,8 3,8 2,2 | 0F,4 0F,4 2F,2 | 0F,4 0F,4 2F,2 | 7,4 8,4 2F,8 0F,8 8,4 | 7,2</code></pre></li>
+</ul>
+<h3 id="ii.-notasi-rasio">II. Notasi Rasio</h3>
+<p>Setiap nada dinotasikan dengan rasio dari tonik atau nada relatif
+dengan pecahan maupun desimal.</p>
+<p>Kelebihan dari notasi ini adalah keobjektivan dan kematematisannya,
+dan bahwa rasio menjadi dasar langsung musik. Namun, notasi ini kurang
+intuitif ketika dibaca dan mungkin besar digitnya. Dengan demikian,
+notasi ini cocok untuk penotasian satuan interval dan enumerasi
+tangganada—yang seharusnya dilakukan oleh semua orang alih-alih
+menggunakan notasi alfabet, apalagi notasi balok—tapi kurang cocok untuk
+penotasian melodi.</p>
+<h5 id="contoh-penggunaan-1">Contoh penggunaan</h5>
+<ul>
+<li>Enumerasi tangganada:<br />
+minor (just intonation): r[1/1, 9/8, 6/5, 4/3, 3/2, 8/5, 9/5]</li>
+</ul>
+<h3 id="iii.-notasi-derajat-dalam-tangganada">III. Notasi Derajat dalam
+Tangganada</h3>
+<p>Setiap nada dalam tangganada dinotasikan menggunakan angka secara
+berurutan dari $tonik=1$. Mirip seperti notasi Barat umum yang
+didasarkan pada tangganada mayor, tetapi dalam notasi ini, nilai yang
+diwakili angka relatif tergantung tangganada yang digunakan. Jika takut
+tertukar dengan notasi angka lain, boleh ditulis dengan $d$ di sebelah
+kiri, cth. $d1, d2, d3$.</p>
+<p>Penandaan oktaf dalam notasi ini sama dengan penandaan oktaf dalam
+notasi ET desimal.</p>
+<p>Notasi ini intuitif, praktis, dan sangat sederhana. Kekurangannya
+adalah nilai yang diwakilinya secara mendasar relatif sehingga konteks
+tangganada harus benar-benar jelas. Dengan demikian, notasi ini cocok
+untuk penotasian <em>satuan nada dalam tangganada</em> dan melodi,
+tetapi tidak relevan untuk enumerasi tangganada. Selain itu, notasi ini
+bisa membingungkan jika dimainkan dengan instrumen dengan
+<em>layout</em> atau label khusus yang tetap, seperti piano.</p>
+<h5 id="contoh-penggunaan-2">Contoh penggunaan</h5>
+<ul>
+<li><p>penotasian melodi:</p>
+<pre><code>tangganada: 12k[0, 2, 3, 7, 8]
+not: derajat
+---
+1F 1F 2F | 1F 1F 2F | 1F 2F 3F 2F | 1F 2F 1F 5 | 4 3 4 5 | 4 4 3 2 | 1F 2F 3F 2F | 1F 2F 1F 5 | 4 3 4 5 | 4 4 3 2 | 1F 1F 2F | 1F 1F 2F | 4 5 2F 1F 5 | 4</code></pre></li>
+</ul>
+<h3 id="iv.-notasi-ritme">IV. Notasi Ritme</h3>
+<blockquote>
+<p>Sebenarnya notasi ritme konvensional sudah praktis. Namun, saya
+kurang suka dengan penotasian/penamaan yang dasarnya relatif (ritme
+$\frac{4}{4}$) dipakai di semua konteks, yang berbeda, jadi agak tidak
+intuitif. Notasi berbeda mungkin menarik? Berikut salah satunya. (Tapi
+mungkin tidak lebih praktis, <em>so it’s just for fun</em>.)</p>
+</blockquote>
+<p>Ada unit ritme kita sebut $b$ yang menjadi unit ketukan teknis.
+Durasi $b$ dihitung dengan bpm.</p>
+<p>Kita nyatakan jumlah $b$ per bar dengan unit bpb (<em>$b$ per
+bar</em>). Kita menotasikan nilai bpb sebagai berikut:
+$\text{jumlah ketukan per bar}/\text{nilai satu ketukan}$. Jika nilai
+ketukan adalah $1b$, cukup ditulis <em>b</em>. Jika nilai ketukan berupa
+pecahan unit, pembilang tidak ditulis, dengan simbol pecahan harus
+eksplisit.</p>
+<p>Mari kita terjemahkan notasi ritme konvensional ke notasi ini.<br />
+nilai not: $1/4=1b, 1/2=2b, 1=4b,$
+$1/8=1/2b, 1/16=1/4b, 1/32=1/8b, 1/64=1/16b.$<br />
+nilai bpb: $4/4=4/b, 3/4=3/b, 5/4=5/b, 6/8=6/\frac{}{2}.$</p>
+<blockquote>
+<p>Jadi pada dasarnya sama saja dengan notasi ritme Barat, tetapi
+mengganti beberapa notasi/label supaya menjadi lebih objektif dan
+intuitif.</p>
+</blockquote>
+<hr />
+<p>Ritme seperti 6/8 bisa dinotasikan dengan berbagai cara:</p>
+<ol type="1">
+<li><p>Seperti notasi konvensional, satu ketukan dinotasikan dengan
+$1/2b$. Ritme dinotasikan sebagai $\frac{6}{/2}$.<br />
+<code>| 1/2 1/2 1/2 1/2 1/2 1/2 |</code></p></li>
+<li><p>Satu ketukan dinotasikan $1/2b$ dan cukup notasikan ritme dengan
+$\frac{3}{b}$ karena secara teknis sama saja.</p>
+<p><code>| 1/2 1/2 1/2 1/2 1/2 1/2 |</code></p></li>
+<li><p>Menotasikan ritme sebagai $\frac{2}{1.5}$ atau
+$\frac{2}{1.5}/\frac{3}{/2}$.</p>
+<p><code>| (1/2 1/2 1/2) (1/2 1/2 1/2) |</code></p></li>
+<li><p>Satu ketukan dinotasikan sebagai $1b$, dan mengalterasi nilai
+$1b\rightarrow1/2b$ (di hulu). Ritme dinotasikan sebagai
+$\frac{6}{b}$.</p>
+<pre><code>1b —&gt; 1/2b
+---
+| 1 1 1 1 1 1 |</code></pre></li>
+<li><p>Menotasikan satu ketukan dengan $1b$ dan menyesuaikan bpm,
+misalnya bpm umum dikali dua. Ritme dinotasikan sebagai
+$\frac{6}{b}$.</p>
+<pre><code>bpm: 100 * 2
+---
+| 1 1 1 1 1 1 |</code></pre></li>
+</ol>
+<ul>
+<li>Jika kita menganggap seperenam ritme tersebut sebagai <em>satu</em>
+ketukan, tetapi ingin yang lebih praktis (karena sesuai dengan bpm umum)
+dan intuitif (karena satu ketukan memiliki bentuk yang lebih kecil),
+maka #1 lebih sesuai.</li>
+<li>Jika tidak menganggap seperenam ritme tersebut sebagai <em>satu</em>
+ketukan, maka #2 paling objektif dan praktis. Atau jika hanya ingin
+melihat ketukan teknis dan menafsirkan ketukan musikal dengan
+konteks.</li>
+<li>Jika menganggap setengah dari ritme tersebut sebagai <em>satu</em>
+ketukan yang dibagi tiga bagian, maka #1 dan #3 lebih sesuai.</li>
+<li>Jika menganggap seperenam ritme tersebut sebagai <em>satu</em>
+ketukan, dan ingin dinotasikan sebagai $1$, maka #4 lebih sesuai.</li>
+<li>Jika benar-benar menganggap seperenam ritme tersebut sebagai
+<em>satu</em> ketukan, maka #5 paling objektif secara matematis.</li>
+</ul>
+<h2 id="notasi-balok">Notasi Balok</h2>
+<p>Berbeda dengan notasi teks, notasi balok alternatif berikut ini saya
+<em>tidak</em> berharap untuk benar-benar digunakan. Notasi balok
+konvensional sudah sangat praktis dan sesuai untuk musisi Barat. Di sisi
+lain, praktisi tradisi musik lain umumnya tidak menggunakan notasi balok
+karena kompleksitas musik mereka sulit atau tidak praktis untuk
+dinotasikan dengan notasi balok. Dan karena lebih banyak unsur
+improvisasinya.</p>
+<p>Dan ini pandangan saya sendiri mengenai notasi balok/partitur<a
+href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a>. Notasi balok/partitur itu bukan
+untuk dibaca ketika bermain musik. Kita harus lebih mengandalkan
+keahlian, hafalan, dan pengembangan kita sendiri, bukan bergantung
+notasi balok secara literal dan kaku.</p>
+<p>Menurut saya, notasi balok itu seperti resep masakan. Setiap masakan
+itu memiliki <em>identitas</em>. Entah itu hasil tidak sengaja atau
+rancangan analitis, jika bagus, lebih baik direkam dan dicatat menjadi
+resep, supaya orang lain di tempat dan waktu yang jauh bisa menikmati
+masakan-masakan unik tersebut. Kita pun ingin dan harus mencoba resep
+orang lain, entah untuk pribadi, untuk mendapatkan pengalaman rasa baru
+nan unik, atau untuk keperluan ilmiah. Kita ingin dan harus bisa
+mendapatkan resep tanpa harus melihat praktiknya secara langsung,
+seperti resep dari tempat dan waktu yang jauh. Kita harus <em>mampu
+membaca</em> resep dengan <em>dasar keahlian memasak yang telah
+dimiliki</em> dan <em>pengetahuan tradisi latar belakang resep</em>.
+Kita belajar sebuah masakan dari resep untuk mengetahui
+<em>dasar-dasar</em>-nya sambil mempraktikkan. Namun, dalam praktik
+berikutnya, kita tidak memasak sambil melihat resep tersebut, kita harus
+lebih mengandalkan keahlian dan pengetahuan dasar, dan mengembangkan
+sesuai keperluan.</p>
+<p>Selain untuk praktik memasak pribadi, resep tertulis tersebut juga
+berguna untuk penelitian ilmiah, entah untuk teori memasak, kajian
+budaya dan sejarah, dan sebagainya.</p>
+<details>
+<summary>
+Begitu pula dengan notasi musik.
+</summary>
+<p>
+Setiap melodi itu memiliki <i>identitas</i>. Entah itu hasil improvisasi
+atau komposisi analitis, jika bagus, lebih baik direkam dan dicatat
+menjadi partitur, supaya orang lain di tempat dan waktu yang jauh bisa
+menikmati melodi-melodi unik tersebut. Kita pun ingin dan harus mencoba
+melodi orang lain, entah untuk pribadi, untuk mendapatkan pengalaman
+rasa yang unik, atau untuk keperluan ilmiah. Kita ingin dan harus bisa
+mendapatkan karya-karya tanpa harus melihat praktiknya secara langsung,
+seperti karya dari tempat dan waktu yang jauh. Kita harus <i>mampu
+membaca</i> partitur dengan <i>dasar keahlian musik yang telah
+dimiliki</i> dan <i>pengetahuan tradisi latar belakang karya</i>. Kita
+belajar sebuah masakan dari partitur untuk mengetahui
+<i>dasar-dasar</i>-nya sambil mempraktikkan. Namun, dalam praktik
+berikutnya, kita tidak bermain sambil melihat partitur, kita harus lebih
+mengandalkan keahlian dan pengetahuan dasar, dan mengembangkannya secara
+kreatif.
+</p>
+<p>
+Selain untuk praktik musik pribadi, notasi tersebut juga berguna untuk
+penelitian ilmiah, entah untuk teori musik, kajian budaya dan sejarah,
+dan sebagainya.
+</p>
+</details>
+<p>Dan yang namanya notasi balok itu cocoknya untuk menotasikan melodi,
+<em>bukan</em> satuan nada maupun enumerasi tangganada.</p>
+<h3 id="balok-12et">I. Berbasis 12-ET</h3>
+<blockquote>
+<ul>
+<li>Pemahaman notasi ET desimal diperlukan untuk memahami notasi
+ini.</li>
+<li>Disarankan untuk memvisualisasikan di atas kertas sambil membaca,
+kecuali jika saya menambahkan ilustrasi ke artikel ini.</li>
+</ul>
+</blockquote>
+<h4 id="dasar">Dasar</h4>
+<p>Notasi ini berdasar empat garis ($g$) utama dan tiga spasi ($s$) di
+antaranya, dan semuanya menjadi posisi ($p$) not. Ada simbol not dasar
+kita labeli $e$ berbentuk lingkaran atau kotak. Berikut adalah nilai
+nada (12-ET) dari posisi terbawah: 0, 2, 4, 6, 8, 10. Lalu ada simbol
+lain yaitu $o$, berbentuk segitiga, yang mengalterasi nilai nada dari
+setiap posisi menjadi satu semiton di atasnya (menjadi ganjil). $g1$
+akan selalu sama dengan $p1$.</p>
+<figure>
+  <img src="ilustrasidasar.svg" alt="ilustrasi dasar">
+  <figcaption>Ilustrasi dasar.</figcaption>
+</figure>
+<pre><code>g1, p1: ——— e1=n0[1], o1=n1[1]
+s3, p6:     e6=n10,   o6=n11
+g3, p5: --  e5=n8,    o5=n9
+s2, p4:     e4=n6,    o4=n7
+g2, p3: --- e3=n4,    o3=n5
+s1, p2:     e2=n2,    o2=n3
+g1, p1: ——— e1=n0,    o1=n1</code></pre>
+<p>Semua garis utama harus ditampilkan menyeluruh. Not-not diluar
+garis-garis utama ditampilkan dengan garis-garis sebagian atau
+<em>ledger lines</em> seperti dalam notasi balok konvensional.
+Garis-garis utama bisa dirotasikan sesuai kebutuhan sambil menjaga
+hierarki ketebalan $g$. Adapun hierarki ketebalan $g$ adalah dari $g1$
+ke $g$ terakhir dalam oktaf.</p>
+<figure>
+<img src="contohrotasi.svg" alt="contoh rotasi">
+<figcaption>Contoh rotasi ke oktaf G—H dengan $g1$ ditampilkan kedua dari atas.</figcaption>
+</figure>
+<h4 id="ritme">Ritme</h4>
+<p>Bentuk simbol not dasar tanpa tiang dan bendera bernilai
+<em>crotchet</em>. Jika ditambah tiang di kiri, <em>minim</em>, ditambah
+bendera ke kiri satu, <em>semibreve</em>. Bentuk dasar jika ditambah
+tiang di kanan, <em>quaver</em>, ditambah satu bendera ke kanan,
+<em>semiquaver</em>, ditambah satu bendera, <em>demi-semiquaver</em>,
+ditambah satu bendera, <em>hemi-demisemiquaver</em>. Not bisa diberi dot
+dengan fungsi sebagaimana dalam notasi konvensional.</p>
+<figure>
+<img src="ritmenot.svg" alt="simbol-simbol not genap dan ganjil dari semibreve ke hemi-demisemiquaver">
+</figure>
+<h4 id="hening">Hening</h4>
+<p>Hening bisa diwakili dengan</p>
+<ul>
+<li>simbol-simbol berikut secara berurutan dari <em>semibreve</em>: a)
+bunga sederhana, b) ranting miring ke kiri dengan cabang di bawah ke
+kanan, c) ranting tegak dengan bintik kecil di ujung atas, d) ranting
+miring ke kanan dengan cabang di bawah ke kiri, e) ranting miring ke
+kanan dengan satu daun ramping di ujung atas ke kanan, f) sama seperti
+(e) tetapi dengan dua daun, g) sama seperti (e) tetapi dengan tiga
+daun;</li>
+<figure>
+<img src="hening.svg" alt="simbol-simbol hening dari semibreve ke hemi-demisemiquaver">
+</figure>
+<li>not dalam bentuk not biasa yang dengan isi berwarna sama dengan
+latar belakang, dengan ukuran dan posisi seperti not biasa tepat setelah
+not sebelumnya; atau</li>
+<li>teks “h[{durasi}]” atau “h{durasi}” dengan desain yang mudah
+dibaca.</li>
+</ul>
+<h4 id="struktur-halaman-notasi-balok-12-et">Struktur Halaman Notasi
+Balok 12-ET</h4>
+<p>Satu halaman notasi berisi hulu<a href="#fn7" class="footnote-ref"
+id="fnref7" role="doc-noteref"><sup>7</sup></a> utama dan badan. Di hulu
+utama, dinotasikan konfigurasi<a href="#fn8" class="footnote-ref"
+id="fnref8" role="doc-noteref"><sup>8</sup></a> yang akan diterapkan ke
+semua paranada<a href="#fn9" class="footnote-ref" id="fnref9"
+role="doc-noteref"><sup>9</sup></a> (yang kemudian ditimpa oleh hulu
+paranada khusus). Badan adalah tempat paranada-paranada berada. Setiap
+paranada berisi hulu paranada dan isi paranada. Sebuah paranada bisa
+diberi konfigurasi atau penandaan tertentu di hulu-nya, yang menimpa
+konfigurasi di hulu utama, khusus untuk paranada tersebut.</p>
+<pre><code>———————————————————————————————————————
+| |—————————————————————————————————| |
+| | 1                               | |
+| |—————————————————————————————————| |
+| | 2                               | |
+| | |—|—————————————————|  |—|————— | |
+| | |3| 4             5 |  | | 6    | |
+| | |—|—————————————————|  |—|————— | |
+| |                                 | |
+| | ———————————————|                | |
+| |   6            |                | |
+| | ———————————————|                | |
+| |                                 | |
+| |—————————————————————————————————| |
+———————————————————————————————————————
+
+i:
+(1)------:&gt;  hulu utama
+(2)------:&gt;  badan
+(3)------:&gt;  hulu paranada
+(4)------:&gt;  isi paranada
+(5)------:&gt;  akhir paranada
+(3, 4, 5):&gt;  satu paranada
+(6)------:&gt;  paranada lain, bersambung</code></pre>
+<p>Contoh penandaan di hulu paranada:</p>
+<ul>
+<li>tonik oktaf dasar</li>
+<li>nada $0$</li>
+</ul>
+<h4 id="catatan">Catatan</h4>
+<p>Kelebihan notasi ini:</p>
+<ul>
+<li>Logis dan konsisten.</li>
+<li>Hanya ada empat garis utama.</li>
+<li>Lebih objektif daripada notasi balok konvensional.</li>
+<li>Ada hierarki ketebalan garis sehingga lebih nyaman dan mudah dibaca.
+(Menurut pengamatan saya, kita lebih nyaman dan mudah membaca sesuatu
+jika ada hierarkinya.)</li>
+<li>Tidak perlu menghafal banyak jenis klef, cukup melihat hierarki
+garis di sepanjang paranada dan penandaan nada $0$ dan tonik oktaf dasar
+di hulu paranada. Perotasian (garis utama) pun tidak terbatas.</li>
+<li>Pola berulang setiap satu oktaf.</li>
+</ul>
+<p>Kekurangan yang <em>mungkin</em>:</p>
+<ul>
+<li>Kurang estetik bagi sebagian orang:
+<ul>
+<li><p>Simbol not tidak sekeren simbol not konvensional. Meskipun
+demikian, simbol not dirancang dengan beberapa dasar.</p>
+<p>Pertama, jika $e$ berbentuk lingkaran maka ia menjadi mnemonik untuk
+<em>bumi</em> atau <em>dasar</em>, jika berbentuk kotak maka menjadi
+mnemonik untuk kegenapan secara langsung, dan segitiga dengan total sisi
+ganjil untuk $o$ menjadi mnemonik keganjilan, dan bentuknya yang
+mengerucut ke atas menyiratkan bahwa ia adalah alterasi ke atas satu
+semiton dari nada genapnya. Meskipun begitu, simbol not sebenarnya
+relatif, yang penting biner untuk mewakili dua jenis nada 12-ET,
+sehingga Anda bisa saja menggunakan simbol khusus, tetapi saya
+menyarankan untuk tetap menggunakan segitiga untuk $o$.</p>
+<p>Kedua, mengenai modifikasi untuk menunjukkan nilai durasi not, saya
+ingin agar itu tidak bergantung pada opasitas isi not, agar nantinya ia
+bisa digunakan untuk makna lain, misalnya hening atau kekerasan not.
+Saya juga ingin tampilan lebih sederhana dan lebih sedikit bendera agar
+lebih mudah ditulis dan dibaca.</p></li>
+<li><p>Simbol not dasar tidak memiliki tiang, sehingga tidak bergaya dan
+membosankan. Namun, menurut saya lebih bagus jika kita umumnya menemukan
+hal yang lebih sederhana dan praktis, dan sesekali melihat yang lebih
+bergaya.</p></li>
+<li><p>Tidak ada simbol klef yang bergaya. Akan tetapi, saya hanya
+menghapus kebutuhan penggunaanya, bukan melarangnya. Jadi, Anda bisa
+saja menggunakan simbol klef yang sesuai, murni untuk estetika.</p></li>
+</ul></li>
+<li>Masih sulit menotasikan musik mikrotonal yang kompleks. Namun,
+setidaknya menggunakan notasi ini dengan simbol alterasi mikroton lebih
+intuitif karena dasar yang objektif dan konsisten, bukan mayor kunci
+C.</li>
+</ul>
+  <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdCp5Denb4tK8u19aw62cRYVBZq-R_0s00PIb6NkOaLE_MH8OzFQzYFQiFCK21WET97EUKrayNDPRDSbC2Uh7Lq8oGuQCzalyPor_GxuGObE_NnKdp7oDK4TbItCQru6pXsb63NaD2p428W6bOyz_TCKe5m9QxDqiAtMqU8tyDthrNRyiq7vpDavGsQuCw/s1463/Compress_20250628_161806_6108.jpg" style="display: block; padding: 1em 0; text-align: center; "><figure><img alt="" border="0" width="320" data-original-height="1272" data-original-width="1463" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdCp5Denb4tK8u19aw62cRYVBZq-R_0s00PIb6NkOaLE_MH8OzFQzYFQiFCK21WET97EUKrayNDPRDSbC2Uh7Lq8oGuQCzalyPor_GxuGObE_NnKdp7oDK4TbItCQru6pXsb63NaD2p428W6bOyz_TCKe5m9QxDqiAtMqU8tyDthrNRyiq7vpDavGsQuCw/s320/Compress_20250628_161806_6108.jpg"/><figcaption>Contoh dengan lagu 'Sakura, Sakura', dengan rotasi di beberapa bar.</figcaption></figure></a></div>
+<h3 id="ii.-berbasis-derajat-dalam-tangganada">II. Berbasis Derajat
+dalam Tangganada</h3>
+<blockquote>
+<ul>
+<li>Pemahaman notasi 12-ET desimal, notasi derajat tangganada, dan
+notasi balok 12-ET (semuanya sebelumnya dijelaskan) diperlukan untuk
+memahami notasi ini.</li>
+</ul>
+</blockquote>
+<figure>
+<img src="derajat.svg" alt="ilustrasi untuk tangganada pentatonik">
+<figcaption>Ilustrasi untuk tangganada pentatonik.</figcaption>
+</figure>
+<p>Notasi ini sama dengan notasi balok 12-ET, dengan beberapa perbedaan.
+Adapun perbedaannya adalah sebagai berikut.</p>
+<p>Jumlah $g$, $s$, dan garis utama tergantung jumlah nada dalam
+tangganada. Hanya ada satu simbol not, yang mewakili nilai derajat
+tangganada. Nilai derajat yang diwakili berurutan secara linear dari $p$
+terbawah, cth. $p1=d1, p2=d2, p3=d3, ...$. Jika total nada dalam
+tangganada ganjil, maka spasi diatas $d$ terakhir dibiarkan kosong, dan
+pola berulang di atasnya.</p>
+<p>Tangganada yang digunakan harus ditulis secara eksplisit di hulu
+utama atau hulu paranada. Jika ada sisipan nada diluar tangganada,
+gunakan simbol alterasi.</p>
+<p>Kelebihan notasi ini adalah kesederhanaan dan kepraktisannya,
+terutama untuk tangganada yang lebih kompleks/mikrotonal. $s$ di atas
+$d$ terakhir jika tangganada ganjil dibiarkan tidak diisi nada supaya
+pola berulang setiap satu oktaf. Ini mungkin jadi agak <em>kagok</em>,
+tapi akh itu mah bukan hal yang besar, itu pun hanya pembiaran dan
+pengosongan. Di samping itu, notasi ini memiliki kekurangan yang sama
+seperti dalam notasi derajat teks.</p>
+<h2 id="glosarium">Glosarium</h2>
+<p>Semuanya peristilahan saya sendiri.</p>
+<h5 id="label-label-dan-makna-awal-nya">Label-label dan makna
+(awal)-nya</h5>
+<p>n$n$ = nada<br />
+d$n$ = derajat<br />
+$n$b = <em>beat</em>, ketukan teknis<br />
+g$n$ = garis<br />
+s$n$ = spasi<br />
+p$n$ = posisi<br />
+e$n$ = <em>even</em><br />
+o$n$ = <em>odd</em><br />
+h = hening</p>
+<h5 id="format-notasi">Format notasi</h5>
+<p>Enumerasi himpunan nada:</p>
+<ul>
+<li><code>{nama}: {ET}e[{himpunan}]</code> (himpunan ET dengan nilai
+eksak)</li>
+<li><code>{nama}: {ET}k[{himpunan}]</code> (himpunan ET dengan nilai
+tidak eksak, kira-kira, atau kasar)</li>
+<li><code>{nama}: r[{himpunan}]</code> (himpunan rasio)</li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><strong>Absolut:</strong> tidak berubah dalam konteks
+berbeda; tidak relatif.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><strong>Not balok:</strong> not yang tidak dilambangkan
+dengan angka, melainkan dengan garis, bulatan, dan tanda lain.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><strong>Enumerasi:</strong> proses menyebutkan atau
+mendaftar elemen-elemen secara satu per satu dalam sebuah himpunan atau
+<em>array</em>, seperti tangganada musik atau deret angka. Contohnya,
+mayor: r[1/1, 9/8, 5/4, 4/3, 3/2, 5/3, 15/8].<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><strong>Tangganada:</strong> tangga nada; skala; mode;
+harmoni waktu mikro/harmoni nada.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><strong>Desimal:</strong> dl konteks ini berarti bisa
+memiliki titik desimal, bukan sistem bilangan berbasis 10. Anda bisa menggunakan sistem bilangan apapun jika Anda mau, misalnya sistem bilangan 12 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, tangminglay, tanmineng) untuk 12-ET.<a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><strong>Partitur:</strong> Bentuk tertulis karya
+musik.<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p><strong>Hulu:</strong> bagian di dalam
+halaman/file/dokumen notasi yang berisi konfigurasi notasi. Di antara
+konfigurasi tersebut: ritme, penyesuaian tuning, tangganada, tonik,
+nilai (frekuensi) $n0$ oktaf dasar, dan alterasi nilai $b$.<a
+href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p><strong>Konfigurasi</strong>: pengaturan, penyetelan,
+atau menyiapkan sesuatu sedemikian rupa sehingga siap untuk dioperasikan
+untuk tujuan tertentu.<a href="#fnref8" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p><strong>Paranada:</strong> serangkaian garis horizontal
+di mana not musik ditulis.<a href="#fnref9" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
 
