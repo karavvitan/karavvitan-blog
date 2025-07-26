@@ -4,19 +4,19 @@ title: ide-notasi-musik-alternatif
 ---
 
 - [Ide Notasi Musik
-  Alternatif](#ide-notasi-musik-alternatif){#toc-ide-notasi-musik-alternatif}
-  - [Notasi Teks](#notasi-teks){#toc-notasi-teks}
+  Alternatif](#ide-notasi-musik-alternatif)
+  - [Notasi Teks](#notasi-teks)
     - [I. Notasi ET
-      Desimal](#i.-notasi-et-desimal5){#toc-i.-notasi-et-desimal5}
-    - [II. Notasi Rasio](#ii.-notasi-rasio){#toc-ii.-notasi-rasio}
+      Desimal](#i.-notasi-et-desimal5)
+    - [II. Notasi Rasio](#ii.-notasi-rasio)
     - [III. Notasi Derajat dalam
-      Tangganada](#iii.-notasi-derajat-dalam-tangganada){#toc-iii.-notasi-derajat-dalam-tangganada}
-    - [IV. Notasi Ritme](#iv.-notasi-ritme){#toc-iv.-notasi-ritme}
-  - [Notasi Balok](#notasi-balok){#toc-notasi-balok}
-    - [I. Berbasis 12-ET](#balok-12et){#toc-balok-12et}
+      Tangganada](#iii.-notasi-derajat-dalam-tangganada)
+    - [IV. Notasi Ritme](#iv.-notasi-ritme)
+  - [Notasi Balok](#notasi-balok)
+    - [I. Berbasis 12-ET](#balok-12et)
     - [II. Berbasis Derajat dalam
-      Tangganada](#ii.-berbasis-derajat-dalam-tangganada){#toc-ii.-berbasis-derajat-dalam-tangganada}
-  - [Glosarium](#glosarium){#toc-glosarium}
+      Tangganada](#ii.-berbasis-derajat-dalam-tangganada)
+  - [Glosarium](#glosarium)
 
 # Ide Notasi Musik Alternatif
 
@@ -62,21 +62,21 @@ lebih logis, intuitif, fleksibel, dan praktis.
 
 Setiap nada dalam ET dinotasikan dengan angka secara berurutan dari 0.
 Mikroton dinotasikan dengan titik desimal. Misalnya jika berbasis 12-ET
-dengan \$\\text{nada 0}=C\$, maka \$C=0, D\\text{\\#}=3, G=7,
-A+20¢=9.2\$.
+dengan $\text{nada 0}=C$, maka $C=0, D\text{\#}=3, G=7,
+A+20¢=9.2$.
 
 Berikut perincian bagaimana oktaf dinotasikan.
 
-- Jika menggunakan oktaf absolut/standar (seperti \$A4=440 Hz\$), kita
-  bisa menandai oktaf menggunakan huruf, dengan \$\\text{oktaf 0}=A\$
+- Jika menggunakan oktaf absolut/standar (seperti $A4=440 Hz$), kita
+  bisa menandai oktaf menggunakan huruf, dengan $\text{oktaf 0}=A$
   dan seterusnya. Oktaf ditulis di kanan nada supaya tidak tertukar
-  dengan notasi alfabet konvensional. Misalnya (12-ET): \$\\text{oktaf
-  6}=\\text{oktaf G}, F3=5D\$.
+  dengan notasi alfabet konvensional. Misalnya (12-ET): $\text{oktaf
+  6}=\text{oktaf G}, F3=5D$.
 - Jika menggunakan oktaf relatif, kita bisa menandai oktaf *non*dasar
   dengan angka langkah oktaf dari oktaf dasar, dalam kurung siku
-  menempel dengan nada ET. Misalnya (12-ET): \$\\text{nada 3 di satu
-  oktaf atas oktaf dasar}=3\[1\]\$, \$\\text{nada 5 di dua oktaf bawah
-  oktaf dasar}=5\[-2\]\$.
+  menempel dengan nada ET. Misalnya (12-ET): $\text{nada 3 di satu
+  oktaf atas oktaf dasar}=3\[1\]$, $\text{nada 5 di dua oktaf bawah
+  oktaf dasar}=5\[-2\]$.
 
 > Nada itu memang lebih cocok dinotasikan dengan angka, dan oktaf
 > dinotasikan dengan huruf.
@@ -90,7 +90,7 @@ Berikut perincian bagaimana oktaf dinotasikan.
 > oktaf spesifik tidaklah relevan, maka huruf cocok untuk
 > menotasikannya.
 
-Gunakan sistem 12-ET, dengan \$\\text{nada 0}=C4=tonik\$ sebagai
+Gunakan sistem 12-ET, dengan $\text{nada 0}=C4=tonik$ sebagai
 *default*. Sebutkan secara eksplisit jika menggunakan yang lain, kecuali
 konteks sangat jelas.
 
@@ -172,11 +172,11 @@ untuk penotasian melodi.
 ### III. Notasi Derajat dalam Tangganada
 
 Setiap nada dalam tangganada dinotasikan menggunakan angka secara
-berurutan dari \$tonik=1\$. Mirip seperti notasi Barat umum yang
+berurutan dari $tonik=1$. Mirip seperti notasi Barat umum yang
 didasarkan pada tangganada mayor, tetapi dalam notasi ini, nilai yang
 diwakili angka relatif tergantung tangganada yang digunakan. Jika takut
-tertukar dengan notasi angka lain, boleh ditulis dengan \$d\$ di sebelah
-kiri, cth. \$d1, d2, d3\$.
+tertukar dengan notasi angka lain, boleh ditulis dengan $d$ di sebelah
+kiri, cth. $d1, d2, d3$.
 
 Penandaan oktaf dalam notasi ini sama dengan penandaan oktaf dalam
 notasi ET desimal.
@@ -202,23 +202,23 @@ khusus yang tetap, seperti piano.
 
 > Sebenarnya notasi ritme konvensional sudah praktis. Namun, saya kurang
 > suka dengan penotasian/penamaan yang dasarnya relatif (ritme
-> \$\\frac{4}{4}\$) dipakai di semua konteks, yang berbeda, jadi agak
+> $\frac{4}{4}$) dipakai di semua konteks, yang berbeda, jadi agak
 > tidak intuitif. Notasi berbeda mungkin menarik? Berikut salah satunya.
 > (Tapi mungkin tidak lebih praktis, *so it's just for fun*.)
 
-Ada unit ritme kita sebut \$b\$ yang menjadi unit ketukan teknis. Durasi
-\$b\$ dihitung dengan bpm.
+Ada unit ritme kita sebut $b$ yang menjadi unit ketukan teknis. Durasi
+$b$ dihitung dengan bpm.
 
-Kita nyatakan jumlah \$b\$ per bar dengan unit bpb (*\$b\$ per bar*).
-Kita menotasikan nilai bpb sebagai berikut: \$\\text{jumlah ketukan per
-bar}/\\text{nilai satu ketukan}\$. Jika nilai ketukan adalah \$1b\$,
+Kita nyatakan jumlah $b$ per bar dengan unit bpb (*$b$ per bar*).
+Kita menotasikan nilai bpb sebagai berikut: $\text{jumlah ketukan per
+bar}/\text{nilai satu ketukan}$. Jika nilai ketukan adalah $1b$,
 cukup ditulis *b*. Jika nilai ketukan berupa pecahan unit, pembilang
 tidak ditulis, dengan simbol pecahan harus eksplisit.
 
 Mari kita terjemahkan notasi ritme konvensional ke notasi ini.\
-nilai not: \$1/4=1b, 1/2=2b, 1=4b,\$ \$1/8=1/2b, 1/16=1/4b, 1/32=1/8b,
-1/64=1/16b.\$\
-nilai bpb: \$4/4=4/b, 3/4=3/b, 5/4=5/b, 6/8=6/\\frac{}{2}.\$
+nilai not: $1/4=1b, 1/2=2b, 1=4b,$ $1/8=1/2b, 1/16=1/4b, 1/32=1/8b,
+1/64=1/16b.$\
+nilai bpb: $4/4=4/b, 3/4=3/b, 5/4=5/b, 6/8=6/\frac{}{2}.$
 
 > Jadi pada dasarnya sama saja dengan notasi ritme Barat, tetapi
 > mengganti beberapa notasi/label supaya menjadi lebih objektif dan
@@ -229,30 +229,30 @@ nilai bpb: \$4/4=4/b, 3/4=3/b, 5/4=5/b, 6/8=6/\\frac{}{2}.\$
 Ritme seperti 6/8 bisa dinotasikan dengan berbagai cara:
 
 1.  Seperti notasi konvensional, satu ketukan dinotasikan dengan
-    \$1/2b\$. Ritme dinotasikan sebagai \$\\frac{6}{/2}\$.\
+    $1/2b$. Ritme dinotasikan sebagai $\frac{6}{/2}$.\
     `| 1/2 1/2 1/2 1/2 1/2 1/2 |`
 
-2.  Satu ketukan dinotasikan \$1/2b\$ dan cukup notasikan ritme dengan
-    \$\\frac{3}{b}\$ karena secara teknis sama saja.
+2.  Satu ketukan dinotasikan $1/2b$ dan cukup notasikan ritme dengan
+    $\frac{3}{b}$ karena secara teknis sama saja.
 
     `| 1/2 1/2 1/2 1/2 1/2 1/2 |`
 
-3.  Menotasikan ritme sebagai \$\\frac{2}{1.5}\$ atau
-    \$\\frac{2}{1.5}/\\frac{3}{/2}\$.
+3.  Menotasikan ritme sebagai $\frac{2}{1.5}$ atau
+    $\frac{2}{1.5}/\frac{3}{/2}$.
 
     `| (1/2 1/2 1/2) (1/2 1/2 1/2) |`
 
-4.  Satu ketukan dinotasikan sebagai \$1b\$, dan mengalterasi nilai
-    \$1b\\rightarrow1/2b\$ (di hulu). Ritme dinotasikan sebagai
-    \$\\frac{6}{b}\$.
+4.  Satu ketukan dinotasikan sebagai $1b$, dan mengalterasi nilai
+    $1b\rightarrow1/2b$ (di hulu). Ritme dinotasikan sebagai
+    $\frac{6}{b}$.
 
         1b —> 1/2b
         ---
         | 1 1 1 1 1 1 |
 
-5.  Menotasikan satu ketukan dengan \$1b\$ dan menyesuaikan bpm,
+5.  Menotasikan satu ketukan dengan $1b$ dan menyesuaikan bpm,
     misalnya bpm umum dikali dua. Ritme dinotasikan sebagai
-    \$\\frac{6}{b}\$.
+    $\frac{6}{b}$.
 
         bpm: 100 * 2
         ---
@@ -268,7 +268,7 @@ Ritme seperti 6/8 bisa dinotasikan dengan berbagai cara:
 - Jika menganggap setengah dari ritme tersebut sebagai *satu* ketukan
   yang dibagi tiga bagian, maka #1 dan #3 lebih sesuai.
 - Jika menganggap seperenam ritme tersebut sebagai *satu* ketukan, dan
-  ingin dinotasikan sebagai \$1\$, maka #4 lebih sesuai.
+  ingin dinotasikan sebagai $1$, maka #4 lebih sesuai.
 - Jika benar-benar menganggap seperenam ritme tersebut sebagai *satu*
   ketukan, maka #5 paling objektif secara matematis.
 
@@ -339,13 +339,13 @@ Dan yang namanya notasi balok itu cocoknya untuk menotasikan melodi,
 
 #### Dasar
 
-Notasi ini berdasar empat garis (\$g\$) utama dan tiga spasi (\$s\$) di
-antaranya, dan semuanya menjadi posisi (\$p\$) not. Ada simbol not dasar
-kita labeli \$e\$ berbentuk lingkaran atau kotak. Berikut adalah nilai
+Notasi ini berdasar empat garis ($g$) utama dan tiga spasi ($s$) di
+antaranya, dan semuanya menjadi posisi ($p$) not. Ada simbol not dasar
+kita labeli $e$ berbentuk lingkaran atau kotak. Berikut adalah nilai
 nada (12-ET) dari posisi terbawah: 0, 2, 4, 6, 8, 10. Lalu ada simbol
-lain yaitu \$o\$, berbentuk segitiga, yang mengalterasi nilai nada dari
-setiap posisi menjadi satu semiton di atasnya (menjadi ganjil). \$g1\$
-akan selalu sama dengan \$p1\$.
+lain yaitu $o$, berbentuk segitiga, yang mengalterasi nilai nada dari
+setiap posisi menjadi satu semiton di atasnya (menjadi ganjil). $g1$
+akan selalu sama dengan $p1$.
 
 ![Ilustrasi
 dasar.](https://raw.githubusercontent.com/karavvitan/karavvitan-blog/main/_posts/INMA/ilustrasidasar.svg)
@@ -361,8 +361,8 @@ dasar.](https://raw.githubusercontent.com/karavvitan/karavvitan-blog/main/_posts
 Semua garis utama harus ditampilkan menyeluruh. Not-not diluar
 garis-garis utama ditampilkan dengan garis-garis sebagian atau *ledger
 lines* seperti dalam notasi balok konvensional. Garis-garis utama bisa
-dirotasikan sesuai kebutuhan sambil menjaga hierarki ketebalan \$g\$.
-Adapun hierarki ketebalan \$g\$ adalah dari \$g1\$ ke \$g\$ terakhir
+dirotasikan sesuai kebutuhan sambil menjaga hierarki ketebalan $g$.
+Adapun hierarki ketebalan $g$ adalah dari $g1$ ke $g$ terakhir
 dalam oktaf.
 
 <figure>
@@ -441,7 +441,7 @@ untuk paranada tersebut.
 Contoh penandaan di hulu paranada:
 
 - tonik oktaf dasar
-- nada \$0\$
+- nada $0$
 
 #### Catatan
 
@@ -454,7 +454,7 @@ Kelebihan notasi ini:
   (Menurut pengamatan saya, kita lebih nyaman dan mudah membaca sesuatu
   jika ada hierarkinya.)
 - Tidak perlu menghafal banyak jenis klef, cukup melihat hierarki garis
-  di sepanjang paranada dan penandaan nada \$0\$ dan tonik oktaf dasar
+  di sepanjang paranada dan penandaan nada $0$ dan tonik oktaf dasar
   di hulu paranada. Perotasian (garis utama) pun tidak terbatas.
 - Pola berulang setiap satu oktaf.
 
@@ -464,15 +464,15 @@ Kekurangan yang *mungkin*:
   - Simbol not tidak sekeren simbol not konvensional. Meskipun demikian,
     simbol not dirancang dengan beberapa dasar.
 
-    Pertama, jika \$e\$ berbentuk lingkaran maka ia menjadi mnemonik
+    Pertama, jika $e$ berbentuk lingkaran maka ia menjadi mnemonik
     untuk *bumi* atau *dasar*, jika berbentuk kotak maka menjadi
     mnemonik untuk kegenapan secara langsung, dan segitiga dengan total
-    sisi ganjil untuk \$o\$ menjadi mnemonik keganjilan, dan bentuknya
+    sisi ganjil untuk $o$ menjadi mnemonik keganjilan, dan bentuknya
     yang mengerucut ke atas menyiratkan bahwa ia adalah alterasi ke atas
     satu semiton dari nada genapnya. Meskipun begitu, simbol not
     sebenarnya relatif, yang penting biner untuk mewakili dua jenis nada
     12-ET, sehingga Anda bisa saja menggunakan simbol khusus, tetapi
-    saya menyarankan untuk tetap menggunakan segitiga untuk \$o\$.
+    saya menyarankan untuk tetap menggunakan segitiga untuk $o$.
 
     Kedua, mengenai modifikasi untuk menunjukkan nilai durasi not, saya
     ingin agar itu tidak bergantung pada opasitas isi not, agar nantinya
@@ -493,13 +493,8 @@ Kekurangan yang *mungkin*:
   lebih intuitif karena dasar yang objektif dan konsisten, bukan mayor
   kunci C.
 
-::: {.separator style="clear: both;"}
-[](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdCp5Denb4tK8u19aw62cRYVBZq-R_0s00PIb6NkOaLE_MH8OzFQzYFQiFCK21WET97EUKrayNDPRDSbC2Uh7Lq8oGuQCzalyPor_GxuGObE_NnKdp7oDK4TbItCQru6pXsb63NaD2p428W6bOyz_TCKe5m9QxDqiAtMqU8tyDthrNRyiq7vpDavGsQuCw/s1463/Compress_20250628_161806_6108.jpg){style="display: block; padding: 1em 0; text-align: center; "}
-
 ![Contoh dengan lagu \'Sakura, Sakura\', dengan rotasi di beberapa
-bar.](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdCp5Denb4tK8u19aw62cRYVBZq-R_0s00PIb6NkOaLE_MH8OzFQzYFQiFCK21WET97EUKrayNDPRDSbC2Uh7Lq8oGuQCzalyPor_GxuGObE_NnKdp7oDK4TbItCQru6pXsb63NaD2p428W6bOyz_TCKe5m9QxDqiAtMqU8tyDthrNRyiq7vpDavGsQuCw/s320/Compress_20250628_161806_6108.jpg){border="0"
-width="320" original-height="1272" original-width="1463"}
-:::
+bar.](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdCp5Denb4tK8u19aw62cRYVBZq-R_0s00PIb6NkOaLE_MH8OzFQzYFQiFCK21WET97EUKrayNDPRDSbC2Uh7Lq8oGuQCzalyPor_GxuGObE_NnKdp7oDK4TbItCQru6pXsb63NaD2p428W6bOyz_TCKe5m9QxDqiAtMqU8tyDthrNRyiq7vpDavGsQuCw/s320/Compress_20250628_161806_6108.jpg)
 
 ### II. Berbasis Derajat dalam Tangganada
 
@@ -517,11 +512,11 @@ alt="ilustrasi untuk tangganada pentatonik" />
 Notasi ini sama dengan notasi balok 12-ET, dengan beberapa perbedaan.
 Adapun perbedaannya adalah sebagai berikut.
 
-Jumlah \$g\$, \$s\$, dan garis utama tergantung jumlah nada dalam
+Jumlah $g$, $s$, dan garis utama tergantung jumlah nada dalam
 tangganada. Hanya ada satu simbol not, yang mewakili nilai derajat
 tangganada. Nilai derajat yang diwakili berurutan secara linear dari
-\$p\$ terbawah, cth. \$p1=d1, p2=d2, p3=d3, \...\$. Jika total nada
-dalam tangganada ganjil, maka spasi diatas \$d\$ terakhir dibiarkan
+$p$ terbawah, cth. $p1=d1, p2=d2, p3=d3, \...$. Jika total nada
+dalam tangganada ganjil, maka spasi diatas $d$ terakhir dibiarkan
 kosong, dan pola berulang di atasnya.
 
 Tangganada yang digunakan harus ditulis secara eksplisit di hulu utama
@@ -529,7 +524,7 @@ atau hulu paranada. Jika ada sisipan nada diluar tangganada, gunakan
 simbol alterasi.
 
 Kelebihan notasi ini adalah kesederhanaan dan kepraktisannya, terutama
-untuk tangganada yang lebih kompleks/mikrotonal. \$s\$ di atas \$d\$
+untuk tangganada yang lebih kompleks/mikrotonal. $s$ di atas $d$
 terakhir jika tangganada ganjil dibiarkan tidak diisi nada supaya pola
 berulang setiap satu oktaf. Ini mungkin jadi agak *kagok*, tapi akh itu
 mah bukan hal yang besar, itu pun hanya pembiaran dan pengosongan. Di
@@ -542,14 +537,14 @@ Semuanya peristilahan saya sendiri.
 
 ##### Label-label dan makna (awal)-nya
 
-n\$n\$ = nada\
-d\$n\$ = derajat\
-\$n\$b = *beat*, ketukan teknis\
-g\$n\$ = garis\
-s\$n\$ = spasi\
-p\$n\$ = posisi\
-e\$n\$ = *even*\
-o\$n\$ = *odd*\
+n$n$ = nada\
+d$n$ = derajat\
+$n$b = *beat*, ketukan teknis\
+g$n$ = garis\
+s$n$ = spasi\
+p$n$ = posisi\
+e$n$ = *even*\
+o$n$ = *odd*\
 h = hening
 
 ##### Format notasi
@@ -583,8 +578,8 @@ Enumerasi himpunan nada:
 
 [^7]: **Hulu:** bagian di dalam halaman/file/dokumen notasi yang berisi
     konfigurasi notasi. Di antara konfigurasi tersebut: ritme,
-    penyesuaian tuning, tangganada, tonik, nilai (frekuensi) \$n0\$
-    oktaf dasar, dan alterasi nilai \$b\$.
+    penyesuaian tuning, tangganada, tonik, nilai (frekuensi) $n0$
+    oktaf dasar, dan alterasi nilai $b$.
 
 [^8]: **Konfigurasi**: pengaturan, penyetelan, atau menyiapkan sesuatu
     sedemikian rupa sehingga siap untuk dioperasikan untuk tujuan
