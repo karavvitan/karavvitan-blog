@@ -307,26 +307,33 @@ Selain untuk praktik memasak pribadi, resep tertulis tersebut juga
 berguna untuk penelitian ilmiah, entah untuk teori memasak, kajian
 budaya dan sejarah, dan sebagainya.
 
+<details>
+<summary>
 Begitu pula dengan notasi musik.
-
-Setiap melodi itu memiliki *identitas*. Entah itu hasil improvisasi atau
-komposisi analitis, jika bagus, lebih baik direkam dan dicatat menjadi
-partitur, supaya orang lain di tempat dan waktu yang jauh bisa menikmati
-melodi-melodi unik tersebut. Kita pun ingin dan harus mencoba melodi
-orang lain, entah untuk pribadi, untuk mendapatkan pengalaman rasa yang
-unik, atau untuk keperluan ilmiah. Kita ingin dan harus bisa mendapatkan
-karya-karya tanpa harus melihat praktiknya secara langsung, seperti
-karya dari tempat dan waktu yang jauh. Kita harus *mampu membaca*
-partitur dengan *dasar keahlian musik yang telah dimiliki* dan
-*pengetahuan tradisi latar belakang karya*. Kita belajar sebuah masakan
-dari partitur untuk mengetahui *dasar-dasar*-nya sambil mempraktikkan.
-Namun, dalam praktik berikutnya, kita tidak bermain sambil melihat
-partitur, kita harus lebih mengandalkan keahlian dan pengetahuan dasar,
-dan mengembangkannya secara kreatif.
-
+</summary>
+<p>
+Setiap melodi itu memiliki <i>identitas</i>. Entah itu hasil improvisasi
+atau komposisi analitis, jika bagus, lebih baik direkam dan dicatat
+menjadi partitur, supaya orang lain di tempat dan waktu yang jauh bisa
+menikmati melodi-melodi unik tersebut. Kita pun ingin dan harus mencoba
+melodi orang lain, entah untuk pribadi, untuk mendapatkan pengalaman
+rasa yang unik, atau untuk keperluan ilmiah. Kita ingin dan harus bisa
+mendapatkan karya-karya tanpa harus melihat praktiknya secara langsung,
+seperti karya dari tempat dan waktu yang jauh. Kita harus <i>mampu
+membaca</i> partitur dengan <i>dasar keahlian musik yang telah
+dimiliki</i> dan <i>pengetahuan tradisi latar belakang karya</i>. Kita
+belajar sebuah masakan dari partitur untuk mengetahui
+<i>dasar-dasar</i>-nya sambil mempraktikkan. Namun, dalam praktik
+berikutnya, kita tidak bermain sambil melihat partitur, kita harus lebih
+mengandalkan keahlian dan pengetahuan dasar, dan mengembangkannya secara
+kreatif.
+</p>
+<p>
 Selain untuk praktik musik pribadi, notasi tersebut juga berguna untuk
 penelitian ilmiah, entah untuk teori musik, kajian budaya dan sejarah,
 dan sebagainya.
+</p>
+</details>
 
 Dan yang namanya notasi balok itu cocoknya untuk menotasikan melodi,
 *bukan* satuan nada maupun enumerasi tangganada.
