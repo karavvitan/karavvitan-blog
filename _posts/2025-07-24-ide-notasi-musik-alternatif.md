@@ -1,6 +1,7 @@
 ---
 date: 2025-07-24
 title: ide-notasi-musik-alternatif
+layout: default
 ---
 
 - [Ide Notasi Musik
