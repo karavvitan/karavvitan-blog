@@ -3,7 +3,7 @@ date: 2025-07-24
 title: ide-notasi-musik-alternatif
 ---
 
-<head>{% include katex.html %}</head>
+{% include katex.html %}
 
 - [Ide Notasi Musik
   Alternatif](#ide-notasi-musik-alternatif)
