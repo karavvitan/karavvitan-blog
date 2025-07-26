@@ -1,7 +1,7 @@
 ---
+layout: default
 date: 2025-07-24
 title: ide-notasi-musik-alternatif
-layout: default
 ---
 
 - [Ide Notasi Musik
@@ -133,17 +133,16 @@ melodi dalam bentuk teks jika pembaca terbiasa. Atau bisa menggunakan
 
   - sederhana:
 
-  <!-- -->
-
+```
       judul: Dasar Melodi 'Sakura Sakura'
       not: 12k /*12-ET, kasar/kira-kira*/
       ---
       0F 0F 2F | 0F 0F 2F |  0F 2F 3F 2F | 0F 2F 0F 8 | 7 3 7 8 | 7 7 3 2 | 0F 2F 3F 2F | 0F 2F 0F 8 | 7 3 7 8 | 7 7 3 2 | 0F 0F 2F | 0F 0F 2F  | 7 8 2F 0F 8 | 7
+```
 
   - dengan ritme:
 
-  <!-- -->
-
+```
       judul: Dasar Melodi 'Sakura Sakura'
       tangganada: 12k[0, 2, 3, 7, 8] /*Saya tidak tahu namanya*/
       bpm: 62
@@ -151,6 +150,7 @@ melodi dalam bentuk teks jika pembaca terbiasa. Atau bisa menggunakan
       (bagian kanan koma adalah penyebut dari nilai not)
       ---
       0F,4 0F,4 2F,2 | 0F,4 0F,4 2F,2 | 0F,4 2F,4 3F,4 2F,4 | 0F,4 2F,8 0F,8 8,2 | 7,4 3,4 7,4 8,4 | 7,4 7,8 3,8 2,2 | 0F,4 2F,4 3F,4 2F,4 | 0F,4 2F,8 0F,8 8,2 | 7,4 3,4 7,4 8,4 | 7,4 7,8 3,8 2,2 | 0F,4 0F,4 2F,2 | 0F,4 0F,4 2F,2 | 7,4 8,4 2F,8 0F,8 8,4 | 7,2
+```
 
 ### II. Notasi Rasio
 
@@ -194,10 +194,12 @@ khusus yang tetap, seperti piano.
 
 - penotasian melodi:
 
+```
       tangganada: 12k[0, 2, 3, 7, 8]
       not: derajat
       ---
       1F 1F 2F | 1F 1F 2F | 1F 2F 3F 2F | 1F 2F 1F 5 | 4 3 4 5 | 4 4 3 2 | 1F 2F 3F 2F | 1F 2F 1F 5 | 4 3 4 5 | 4 4 3 2 | 1F 1F 2F | 1F 1F 2F | 4 5 2F 1F 5 | 4
+```
 
 ### IV. Notasi Ritme
 
@@ -358,6 +360,7 @@ akan selalu sama dengan $p1$.
 ![Ilustrasi
 dasar.](https://raw.githubusercontent.com/karavvitan/karavvitan-blog/main/_posts/INMA/ilustrasidasar.svg)
 
+```
     g1, p1: ——— e1=n0[1], o1=n1[1]
     s3, p6:     e6=n10,   o6=n11
     g3, p5: --  e5=n8,    o5=n9
@@ -365,6 +368,7 @@ dasar.](https://raw.githubusercontent.com/karavvitan/karavvitan-blog/main/_posts
     g2, p3: --- e3=n4,    o3=n5
     s1, p2:     e2=n2,    o2=n3
     g1, p1: ——— e1=n0,    o1=n1
+```
 
 Semua garis utama harus ditampilkan menyeluruh. Not-not diluar
 garis-garis utama ditampilkan dengan garis-garis sebagian atau *ledger
@@ -421,6 +425,7 @@ paranada. Sebuah paranada bisa diberi konfigurasi atau penandaan
 tertentu di hulu-nya, yang menimpa konfigurasi di hulu utama, khusus
 untuk paranada tersebut.
 
+```
     ———————————————————————————————————————
     | |—————————————————————————————————| |
     | | 1                               | |
@@ -436,6 +441,7 @@ untuk paranada tersebut.
     | |                                 | |
     | |—————————————————————————————————| |
     ———————————————————————————————————————
+```
 
     i:
     (1)------:>  hulu utama
